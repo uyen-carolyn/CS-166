@@ -1,0 +1,35 @@
+1. 
+  a. Write a script (in any language) that uses Frequency Analysis Counter to decrypt any given ciphertext. *see code in other file*
+  b. Write an essay explaining the quality of your code's algorithm given that the ciphertext is length 25, 500, and 10000. 
+     The program I wrote uses a lot of loops and includes a nested for-loops in order to map out the proper alphabet based on frequency analysis. Because of this, the script runs at around O(n^2). The script would take longer to run as the length increases but it is very prominent even before length 500. At 25, it would be 625, 500 would be 250000, and 10000 would be 100000000. The loops are meant to help count the number of frequencies of each letter in the ciphertext and create various maps to keep track and "translate" which letter may correspond to which. 
+2. 
+  a. What are the pros and cons of using a keystream? (Pros and cons of stream cipher)
+     The pros are that there is no error proppagation and makes the cipher faster than a block cipher. 
+     The cons is that it is difficult to implement, requires synchronization, and doesn't provide authentication or protection. 
+  b. How is the keystream applied to the plaintext? 
+     The keystream is applied to the plaintext using XOR. 
+3. Describe Kerckhoff's principle and why it is so important in designing a cipher.
+Kerckhoff's principle is that the cipher must be secure but the cryptosystem is known by everyone- even the attacker. Only the key is kept secret. 
+It's important to keep this in mind because the security of the cipher should depend on the secrecy of the key, not the secrecy of the system. A cipher is secure if the only way to crack the cipher is by knowing and using the key; cracking the cipher in other ways means the cipher has flaws that can be exploited and is insecure. It's been proven that secret systems end up being cracked through processes like reverse engineering, so there is no point in keeping it secret when it may be insecure to begin with.  
+
+4. How many different keys are needed to encrypt and decrypt a message using symmetric key crypto? 
+   a. 0
+   b. 2
+   c. 1 ***
+   d. 4
+5. If a cipher is a product cipher, which of these sentences is correct?
+   a. There is no way to get the plaintext from the ciphertext. 
+   b. There is a clear relationship between the plaintext and the ciphertext. 
+   c. There is no clear relationship between the plaintext and the ciphertext. ***
+
+6. The idea behind Stream ciphers is based on a which cipher? 
+   a. Simple Substitution
+   b. TEA
+   c. A5/1
+   d. One-Time Pad ***
+
+7. In A5/1, what do you store in the three registers to let the algorithm start? 
+   a. The Key ***
+   b. The Plaintext
+   c. The Ciphertext
+   d. My hopes and dreams
